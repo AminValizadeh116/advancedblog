@@ -3,9 +3,9 @@ import Input from "@/components/input";
 import Textarea from "@/components/textarea";
 import { useRouter } from "next/navigation";
 
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
-function page() {
+function Page() {
   const router = useRouter()
   const [newsData, setNewData] = useState({
     title: "",
@@ -34,7 +34,7 @@ function page() {
     }));
   };
 
-  const sendData = () => {
+  const sendData = useCallback(() => {
     if (
       newsData.author &&
       newsData.date &&
@@ -46,7 +46,7 @@ function page() {
     } else {
        setShowAlert(true)
     }
-  };
+  },[newsData, router])
 
   useEffect(()=>{
     setTimeout(() => {
@@ -101,4 +101,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

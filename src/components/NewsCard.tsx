@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -8,13 +9,16 @@ interface InewcardProps{
   title: string,
   author: string,
   published: string
+  IdHref: string
 }
 
-function NewsCard({color, image, description, title, author, published}: InewcardProps) {
+function NewsCard({color, image, description, title, author, published, IdHref}: InewcardProps) {
   return (
-    <Link href='/blogs/1'>
+    <Link href={`/blogs/${IdHref}`}>
       <div className={`col-span-1 ${color} rounded-2xl p-5 h-150`}>
-        <img
+        <Image
+          width={400}
+          height={100}
           className="h-80 m-auto"
           src={image? image: 'https://lgaming.ma/wp-content/uploads/2023/02/In-the-News.jpg'}
           alt="image"

@@ -1,11 +1,11 @@
-import Image from "next/image";
+import Image from "next/image"; 
 import React from "react";
 import news from "./../../public/news.jpg";
 
 function Notice() {
   return (
     <div className="grid grid-cols-5 gap-4 items-center relative">
-      <Image className="col-span-3 " src={news} alt="mmad" />
+      <Image width={750} height={500} className="col-span-3 " src={news} alt="mmad" />
       <div className="flex gap-5 rounded-2xl p-5 absolute bottom-4 left-25">
         <button className="hover:border-2 hover:border-amber-800 hover:bg-white hover:text-amber-950 border-2 border-amber-800 cursor-pointer text-2xl rounded-3xl bg-amber-800 px-8 py-3 text-white">
           create your Article

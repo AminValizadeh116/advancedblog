@@ -19,7 +19,7 @@ export interface Result {
   pubDate: string
   pubDateTZ: string
   image_url: string
-  video_url: any
+  video_url: string
   source_id: string
   source_name: string
   source_priority: number

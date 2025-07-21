@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 function Category({
   altImage,
@@ -18,7 +19,7 @@ function Category({
         className="flex items-center justify-around"
       >
         <h3 className="pr-5 text-2xl font-bold">{title}</h3>
-        <Image className="rounded-2xl h-20 w-40" src={image} alt={altImage} />
+        <Image className="rounded-2xl h-20 w-40" src={image as  StaticImport} alt={altImage} />
       </Link>
     </li>
   );

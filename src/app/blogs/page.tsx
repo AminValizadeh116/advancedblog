@@ -14,6 +14,7 @@ async function articles() {
       <div className="grid grid-cols-4 gap-5 mt-10">
         {data.results.map((item) => (
           <NewsCard
+            IdHref={item.article_id}
             color="bg-red-400"
             author={item.source_name}
             description={item.description}

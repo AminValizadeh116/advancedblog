@@ -13,8 +13,11 @@ async function News() {
     <div className="bg-amber-950 mt-10">
     <h2 className="text-4xl font-black text-amber-50 p-10"> selected news </h2>
       <div className="mt-7 grid grid-cols-5 gap-3 px-3 py-5">
-        {data.results.slice(0, 5).map((item) => (
+        {
+          data.status !== "error" ?
+        data.results.slice(0,5).map(item =>(
           <NewsCard
+            IdHref={item.article_id}
             image={item.image_url}
             published={item.pubDate}
             title={item.title}
@@ -23,7 +26,9 @@ async function News() {
             color="bg-amber-50"
             key={item.article_id}
           />
-        ))}
+        )):
+        <p className="text-white">wait for a second</p>
+        }
       </div>
     </div>
   );
