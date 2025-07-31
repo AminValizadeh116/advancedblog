@@ -1,7 +1,6 @@
 import { Root } from "@/components/countries";
 import Image from "next/image";
 import React from "react";
-import newsImage from './../../../../public/news.jpg'
 
 export async function generateStaticParams() {
   const result = await fetch(
@@ -52,7 +51,7 @@ async function page({ params }: { params: Promise<{ id: string }> }) {
                 data.results.find((i) => i.article_id === id)?.image_url
                   ? (data.results.find((i) => i.article_id === id)
                       ?.image_url as string)
-                  : "./../../../../public/news.jpg"
+                  : 'https://lgaming.ma/wp-content/uploads/2023/02/In-the-News.jpg'
               }
               alt="news image"
               width={900}
