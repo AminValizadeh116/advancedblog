@@ -17,10 +17,10 @@ export function UnsuspendCountry() {
 
   return (
     <div>
-      <h1 className="text-3xl pt-10 font-black">{name} news</h1>
+      <h1 className="max-md:text-xl max-md:font-bold text-3xl pt-10 font-black mb-10">{name} news</h1>
 
       {countryData !== undefined ? (
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-5 max-md:flex max-md:flex-col">
           {countryData.status !== "error" ? (
             countryData.results
               .filter((item) => item.country.includes(name))

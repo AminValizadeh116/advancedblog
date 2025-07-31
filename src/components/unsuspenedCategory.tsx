@@ -17,9 +17,9 @@ export function UnsuspenedCategory() {
 
   return (
     <div>
-      <h1 className="text-4xl font-black my-10">{Title} news</h1>
+      <h1 className="max-md:text-xl max-md:font-bold text-3xl pt-10 font-black mb-10">{Title} news</h1>
       {categoryData !== undefined ? (
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-5 max-md:flex max-md:flex-col">
           {categoryData.status !== "error" ? (
             categoryData.results
               .filter((item) => item.category.includes(Title))

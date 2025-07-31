@@ -11,7 +11,7 @@ async function articles() {
   return (
     <div>
       <h1 className="text-5xl pt-15 font-black">Articles</h1>
-      <div className="grid grid-cols-4 gap-5 mt-10">
+      <div className="grid xl:grid-cols-3 2xl:grid-cols-4 md:grid-cols-2 gap-5 max-md:flex max-md:flex-col">
         {data.results.map((item) => (
           <NewsCard
             IdHref={item.article_id}

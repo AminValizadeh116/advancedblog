@@ -5,7 +5,7 @@ import Navbar from './header/Navbar'
 
 function Header() {
   return (
-    <div className="flex gap-10 items-end justify-between">
+    <div className="flex max-xl:gap-10 min-xl:items-end min-xl:justify-between max-xl:flex-col">
         <SiteLogo />
         <Search />
         <Navbar />

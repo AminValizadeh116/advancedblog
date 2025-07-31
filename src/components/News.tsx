@@ -7,12 +7,11 @@ async function News() {
     "https://newsdata.io/api/1/latest?apikey=pub_25f3f600890442e9afaf0cce96529ba5&q=technology&language=en&country=us,de,ca,ir&category=crime,health,technology"
   );
   const data = (await result.json()) as Root;
-  console.log(data)
 
   return (
-    <div className="bg-amber-950 mt-10">
-    <h2 className="text-4xl font-black text-amber-50 p-10"> selected news </h2>
-      <div className="mt-7 grid grid-cols-5 gap-3 px-3 py-5">
+    <div className="bg-amber-950 max-xl:p-4 p-10 mt-10 max-xl:overflow-x-auto max-xl:scroll-smooth">
+    <h2 className="max-sm:text-2xl text-4xl font-black text-amber-50"> selected news </h2>
+      <div className="mt-7 min-md:pr-10 max-sm:p-0 px-5 gap-3 max-xl:inline-flex grid grid-cols-5">
         {
           data.status !== "error" ?
         data.results.slice(0,5).map(item =>(

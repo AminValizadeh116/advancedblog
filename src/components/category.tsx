@@ -19,9 +19,9 @@ function Category({
           href={{ pathname: "/category", query: { title } }}
           className="flex items-center justify-around"
         >
-          <h3 className="pr-5 text-2xl font-bold">{title}</h3>
+          <h3 className="text-2xl max-md:text-lg font-bold">{title}</h3>
           <Image
-            className="rounded-2xl h-20 w-40"
+            className="rounded-2xl h-20 w-40 max-lg:hidden"
             src={image as StaticImport}
             alt={altImage}
           />

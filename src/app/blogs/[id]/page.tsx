@@ -1,6 +1,7 @@
 import { Root } from "@/components/countries";
 import Image from "next/image";
 import React from "react";
+import newsImage from './../../../../public/news.jpg'
 
 export async function generateStaticParams() {
   const result = await fetch(
@@ -22,7 +23,6 @@ async function page({ params }: { params: Promise<{ id: string }> }) {
   );
   const data = (await result.json()) as Root;
   const { id } = await params;
-  console.log(await params);
 
   return (
     <div className="px-30">
@@ -52,7 +52,7 @@ async function page({ params }: { params: Promise<{ id: string }> }) {
                 data.results.find((i) => i.article_id === id)?.image_url
                   ? (data.results.find((i) => i.article_id === id)
                       ?.image_url as string)
-                  : "./../../../public/news.jpg"
+                  : "./../../../../public/news.jpg"
               }
               alt="news image"
               width={900}
@@ -70,7 +70,7 @@ async function page({ params }: { params: Promise<{ id: string }> }) {
               ?.keywords?.map((item) => (
                 <li
                   key={
-                    data.results.find((i) => i.article_id === id)?.article_id
+                    data.results.find(i => i.article_id === id)?.keywords?.indexOf(item)
                   }
                   className="text-blue-700"
                 >
