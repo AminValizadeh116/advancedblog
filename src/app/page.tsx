@@ -5,7 +5,7 @@ import Notice from "@/components/Notice";
 
 export default function Home() {
   return (
-    <div>
+    <div className="max-sm:p-4">
       <hr className="mt-10"/>
       <Notice />
       <hr className="mt-5"/>

@@ -9,7 +9,7 @@ function Textarea({handelChange, name}: ItextArea) {
   return (
     <>
       <label htmlFor={name}>{name}</label>
-        <textarea id={name} className="border-2 h-35" onChange={handelChange}></textarea>
+        <textarea id={name} className="border-2 h-35 max-sm:w-50" onChange={handelChange}></textarea>
     </>
   )
 }

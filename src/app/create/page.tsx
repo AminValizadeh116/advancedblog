@@ -67,6 +67,7 @@ function Page() {
   // })
 
   return (
+    <div className="max-sm:w-dvw max-sm:ml-10">
     <div>
       <h1 className="text-4xl font-black my-10">create page</h1>
       <div className="flex flex-col w-120 m-auto">
@@ -97,6 +98,7 @@ function Page() {
           send
         </button>
       </div>
+    </div>
     </div>
   );
 }

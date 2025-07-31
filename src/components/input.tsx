@@ -9,7 +9,7 @@ function Input({handleChange, name}: Iinput) {
   return (
     <>
       <label htmlFor={name}>{name}</label>
-      <input id={name} name={name} onChange={handleChange} className="border-2" />
+      <input id={name} name={name} onChange={handleChange} className="border-2 max-sm:w-50" />
     </>
   );
 }
